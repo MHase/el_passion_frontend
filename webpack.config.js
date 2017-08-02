@@ -3,7 +3,7 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 
-var DIST_DIR = path.resolve(__dirname, "../");
+var DIST_DIR = path.resolve(__dirname, "dist");
 var SRC_DIR = path.resolve(__dirname, "src");
 
 module.exports = {
@@ -27,7 +27,7 @@ module.exports = {
                     {
                         loader: 'babel-loader',
                         options: {
-                            presets: ['es2015']
+                            presets: ['es2015', 'react']
                         }
                     }
                 ]

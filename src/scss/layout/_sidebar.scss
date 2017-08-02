@@ -1,24 +1,16 @@
+//whole sidebar css || navigation bar
 .sidebar {
-  // filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='svgMask'><feGaussianBlur stdDeviation='10' /></filter></svg>#svgMask");
   position: relative;
-  // max-width: 150px;
-  // height: 100%;
   border-radius: 10px 0 0 10px;
-  background: rgba(34,36,54,0.9);
-  // &--blur {
-  //   background: rgba(34,36,54,0.9);
-  //   filter: blur(10px);
-  //   height: 100%;
-  //   width: 100%;
-  //   position: absolute;
-  //   z-index: -1;
-  // }
+  background: rgba(16,16,34,0.9);
+
+  //div holfin window buttons
   &__controls {
     display: flex;
     padding: 15px;
     border-radius: 10px 0 0 0;
     background: #101022; //rgba(34,36,54,0.1);
-
+    //common css for window buttons
     .control {
       width: 10px;
       height: 10px;
@@ -26,7 +18,7 @@
       cursor: pointer;
       border-radius: 100%;
     }
-
+    //every single window button color
     .close {
       background: #ff594f;
     }
@@ -40,25 +32,33 @@
     }
   }
 
+  //list of filters - all, open, closed
   &__list {
+    //single filter
     .sidebar__filter {
       display: flex;
-      padding: 15px;
-      font-size: 14px;
       align-items: center;
       justify-content: space-between;
+      padding: 15px;
       cursor: pointer;
+      font-size: 14px;
+      backdrop-filter: blur(10px);
+
+      &--selected {
+        background: #292a48;
+      }
+
       &:hover {
         background: #292a48;
       }
+
       &:active {
         background: #383a63;
       }
-
+      //filter title with svg
       .filter__icon-name {
         display: flex;
         align-items: center;
-
 
         svg path {
           fill: #FFF;
@@ -71,13 +71,14 @@
         }
       }
 
+      //last part of filter - counter of issues
       .filter__count {
-        color: #FFF;
+        min-width: 16px;
+        text-align: right;
+        color: #8a8995;
       }
 
-      &--selected {
-        background: #292a48;
-      }
+
     }
   }
 }

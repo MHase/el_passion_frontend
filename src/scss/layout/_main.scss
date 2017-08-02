@@ -1,0 +1,42 @@
+//container holding list of issueas
+.issues-container {
+  overflow: auto;
+  box-sizing: border-box;
+  width: 500px;
+  padding: 10px 15px;
+  border-radius: 0 10px 10px 0;
+  background: #f6f6f6;
+
+  //single group of issues
+  .issue-group {
+    &__date {
+      display: block;
+      margin: 10px 0;
+      color: #8a8995;
+      font-size: 12px;
+    }
+
+    //independent issue
+    &__single {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      margin-bottom: 5px;
+      padding: 10px;
+      color: #080606;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+      background: #FFF;
+      font-size: 15px;
+      //star informing if issue is closed or open
+      .issue-star {
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+
+
+}
