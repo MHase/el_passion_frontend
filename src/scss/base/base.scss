@@ -3,7 +3,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: url('../../img/background.jpg') no-repeat center center fixed;
+  background: url('../img/background.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -11,6 +11,7 @@ body {
   font-family: 'Roboto', 'sans-serif';
 }
 
+//app container for app on website
 .app-container {
   display: flex;
   height: 500px;
@@ -19,14 +20,16 @@ body {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
 }
 
+
+//scrollbar styles
 ::-webkit-scrollbar {
   width: 8px;
-  background-color: rgba(0,0,0,0);
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid rgba(0, 0, 0, 0);
-  border-top: 5px solid rgba(0,0,0,0);
+  border: 2px solid transparent;
+  border-top: 5px solid transparent;
   border-radius: 10px;
   background-color: #e0e0e0;
   background-clip: padding-box;

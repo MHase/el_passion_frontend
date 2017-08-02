@@ -1,32 +1,47 @@
 import React  from 'react';
 import {render} from 'react-dom';
 
-import {Issues} from './components/issues';
-
-
-
-class App extends React.Component {
-  render() {
-    return (
-    <div>
-      <Issues/>
-    </div>
-    );
-  }
-}
-
-render(<App/>, document.getElementById('react-issues'));
-
-
-
-
-
-
+//import styles and images
 import '../scss/master.scss';
 import '../img/star_full.png';
 import '../img/star_empty.png';
 
+
+let issues_list = [
+  {issue_date:'19-07-2016',
+    issues: [{title: 'Page changes', state: 'closed'}, {title: 'Review of last issues', state: 'closed'} ]},
+  {issue_date:'18-07-2016',
+    issues: [{title: 'Visual UI Update Review', state: 'open'}, {title: 'Sidebar changes', state: 'open'} ]},
+  {issue_date:'15-07-2016',
+    issues: [{title: 'Crash update', state: 'open'}, {title: 'Page visual UI Update Review', state: 'closed'}, {title: 'Sidebar update', state: 'open'} ]},
+  {issue_date:'14-07-2016',
+    issues: [{title: 'Crash issue', state: 'closed'}, {title: 'Visual update & Crash resolve', state: 'closed'}, {title: 'Sidebar changes', state: 'closed'}, {title: 'Review of last issues', state: 'closed'}, {title: 'Page changes', state: 'closed'} ]},
+];
+
+//create component for adding new issues with ease
+class Issues extends React.Component {
+  render() {
+    return (
+      <div>
+        {issues_list.map((issue, i) =>
+          <ul className="issue-group" key={i}>
+            <li className="issue-group__date">{issue.issue_date}</li>
+            {issue.issues.map((single_issue, i) =>
+              <li className="issue-group__single" data-status={single_issue.state} key={i}>{single_issue.title}</li>
+            )}
+          </ul>
+        )}
+      </div>
+    )
+  }
+}
+
+render(<Issues/>, document.getElementById('react-issues'));
+
+
+
 $(document).ready(() => {
+  //count all issues and display on sidebar
   count_issues();
 
   //adding star images to issues
@@ -79,18 +94,15 @@ function count_issues() {
 function filter(clicked_filter, selected_filter = null) {
   //if we clicked 'all' -> show every issue
   if ($(clicked_filter).attr('data-filter-type') == 'all') {
-
     $('.issue-group__single').css('display', 'block');
 
   //if we clicked 'open' -> show only open issues and hide closed ones
   } else if ($(clicked_filter).attr('data-filter-type') == 'open') {
-
     $('.issue-group__single').css('display', 'block');
     $('.issue-group__single[data-status="closed"]').css('display', 'none');
 
   //if we clicked 'closed' -> show only closed issues and hide open ones
   } else if ($(clicked_filter).attr('data-filter-type') == 'closed') {
-
     $('.issue-group__single').css('display', 'block');
     $('.issue-group__single[data-status="open"]').css('display', 'none');
   }

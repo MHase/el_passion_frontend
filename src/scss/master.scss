@@ -1,5 +1,10 @@
-@import url( 'https://fonts.googleapis.com/css?family=Roboto:300,400');
-@import url( 'base/reset.css');
-@import url( 'base/base-variables.scss');
-@import "layout/sidebar";
-@import "layout/main";
+//importing font
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+//importing reset css
+@import 'base/reset';
+
+//import custom styles
+@import 'base/base.scss';
+@import 'layout/sidebar';
+@import 'layout/main';

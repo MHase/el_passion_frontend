@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>El Passion Frontend Recruitment Task</title>
-  <!-- <meta name="viewport" content="width=device-width" /> -->
+  <meta name="viewport" content="width=device-width" />
   <link rel="icon" type="image/png" href="https://www.elpassion.com/images/favicon/favicon-32x32-865e78441a.png" sizes="32x32">
 </head>
 
@@ -13,12 +13,15 @@
 
     <!-- SIDEBAR -->
     <aside class="sidebar">
+      <!-- WINDOW BUTTONS -->
       <div class="sidebar__controls">
         <div class="control close"></div>
         <div class="control minimize"></div>
         <div class="control maximize"></div>
       </div>
+      <!-- FILTERS LIST -->
       <ul class="sidebar__list">
+        <!-- ALL FILTER -->
         <li class="sidebar__filter sidebar__filter--selected" data-filter-type="all">
           <div class="filter__icon-name">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="16" height="15.556" viewBox="0 0 125 121.531">
@@ -28,6 +31,7 @@
           </div>
           <span class="filter__count all">0</span>
         </li>
+        <!-- OPEN FILTER -->
         <li class="sidebar__filter" data-filter-type="open">
           <div class="filter__icon-name">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="15.98" height="16" viewBox="0 0 799 800">
@@ -37,6 +41,7 @@
           </div>
           <span class="filter__count open">0</span>
         </li>
+        <!-- CLOSED FILTER -->
         <li class="sidebar__filter" data-filter-type="closed">
           <div class="filter__icon-name">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="15.963" height="15.963" viewBox="0 0 510 510">
@@ -53,8 +58,6 @@
   <!-- MAIN ISSUES CONTAINER -->
     <main class="issues-container">
       <div id="react-issues"></div>
-      
-
     </main>
   </div>
 

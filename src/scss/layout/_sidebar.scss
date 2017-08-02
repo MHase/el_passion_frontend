@@ -10,6 +10,8 @@
     padding: 15px;
     border-radius: 10px 0 0 0;
     background: #101022; //rgba(34,36,54,0.1);
+    -webkit-backdrop-filter: blur(10px);
+
     //common css for window buttons
     .control {
       width: 10px;
@@ -18,6 +20,7 @@
       cursor: pointer;
       border-radius: 100%;
     }
+
     //every single window button color
     .close {
       background: #ff594f;
@@ -34,6 +37,7 @@
 
   //list of filters - all, open, closed
   &__list {
+
     //single filter
     .sidebar__filter {
       display: flex;
@@ -42,7 +46,6 @@
       padding: 15px;
       cursor: pointer;
       font-size: 14px;
-      backdrop-filter: blur(10px);
 
       &--selected {
         background: #292a48;
@@ -55,6 +58,7 @@
       &:active {
         background: #383a63;
       }
+
       //filter title with svg
       .filter__icon-name {
         display: flex;
@@ -70,15 +74,13 @@
           color: #FFF;
         }
       }
-
+      
       //last part of filter - counter of issues
       .filter__count {
         min-width: 16px;
         text-align: right;
         color: #8a8995;
       }
-
-
     }
   }
 }
