@@ -1,0 +1,83 @@
+.sidebar {
+  // filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='svgMask'><feGaussianBlur stdDeviation='10' /></filter></svg>#svgMask");
+  position: relative;
+  // max-width: 150px;
+  // height: 100%;
+  border-radius: 10px 0 0 10px;
+  background: rgba(34,36,54,0.9);
+  // &--blur {
+  //   background: rgba(34,36,54,0.9);
+  //   filter: blur(10px);
+  //   height: 100%;
+  //   width: 100%;
+  //   position: absolute;
+  //   z-index: -1;
+  // }
+  &__controls {
+    display: flex;
+    padding: 15px;
+    border-radius: 10px 0 0 0;
+    background: #101022; //rgba(34,36,54,0.1);
+
+    .control {
+      width: 10px;
+      height: 10px;
+      margin-right: 10px;
+      cursor: pointer;
+      border-radius: 100%;
+    }
+
+    .close {
+      background: #ff594f;
+    }
+
+    .minimize {
+      background: #ffbc1b;
+    }
+
+    .maximize {
+      background: #00cd46;
+    }
+  }
+
+  &__list {
+    .sidebar__filter {
+      display: flex;
+      padding: 15px;
+      font-size: 14px;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      &:hover {
+        background: #292a48;
+      }
+      &:active {
+        background: #383a63;
+      }
+
+      .filter__icon-name {
+        display: flex;
+        align-items: center;
+
+
+        svg path {
+          fill: #FFF;
+        }
+
+        .icon-title {
+          margin-right: 40px;
+          margin-left: 10px;
+          color: #FFF;
+        }
+      }
+
+      .filter__count {
+        color: #FFF;
+      }
+
+      &--selected {
+        background: #292a48;
+      }
+    }
+  }
+}
