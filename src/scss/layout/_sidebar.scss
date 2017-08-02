@@ -3,6 +3,7 @@
   position: relative;
   border-radius: 10px 0 0 10px;
   background: rgba(16,16,34,0.9);
+  -webkit-backdrop-filter: blur(10px);
 
   //div holfin window buttons
   &__controls {
@@ -10,7 +11,6 @@
     padding: 15px;
     border-radius: 10px 0 0 0;
     background: #101022; //rgba(34,36,54,0.1);
-    -webkit-backdrop-filter: blur(10px);
 
     //common css for window buttons
     .control {
@@ -74,7 +74,7 @@
           color: #FFF;
         }
       }
-      
+
       //last part of filter - counter of issues
       .filter__count {
         min-width: 16px;
